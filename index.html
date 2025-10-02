@@ -17,6 +17,16 @@
         .brand-gradient {
             background-color: #f0fdfa;
         }
+        /* アニメーション用のCSS */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -35,9 +45,9 @@
         <!-- ヒーローセクション -->
         <section class="brand-gradient pt-12 pb-16 px-6">
             <div class="container mx-auto text-center">
-                <h1 class="text-3xl md:text-5xl font-black text-cyan-800 mb-6 text-shadow">紙の請求書・契約書業務から<br>解放されませんか？</h1>
-                <p class="text-cyan-700 font-bold mb-10">【個人ユーザー向け電子請求書発行サービス】</p>
-                <div class="max-w-md mx-auto">
+                <h1 class="text-3xl md:text-5xl font-black text-cyan-800 mb-6 text-shadow fade-in-up">紙の請求書・契約書業務から<br>解放されませんか？</h1>
+                <p class="text-cyan-700 font-bold mb-10 fade-in-up" style="transition-delay: 0.2s;">【個人ユーザー向け電子請求書発行サービス】</p>
+                <div class="max-w-md mx-auto fade-in-up" style="transition-delay: 0.4s;">
                     <img src="images/image1.png" alt="PAYLY Logo" class="w-full h-auto">
                 </div>
             </div>
@@ -46,26 +56,26 @@
         <!-- お悩みセクション -->
         <section class="py-20 px-6">
             <div class="container mx-auto max-w-6xl">
-                <h2 class="text-center text-3xl font-bold text-gray-800 mb-12">こんなお悩みはありませんか？</h2>
+                <h2 class="text-center text-3xl font-bold text-gray-800 mb-12 fade-in-up">こんなお悩みはありませんか？</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <i class="fas fa-file-invoice-dollar text-cyan-500 text-3xl mb-4"></i>
-                        <p class="font-semibold">請求書や契約書の作成、印刷・発送作業に時間がかかっている</p>
+                    <div class="bg-white p-4 rounded-full shadow-md text-center fade-in-up flex flex-col items-center justify-center aspect-square" style="transition-delay: 0.1s;">
+                        <i class="fas fa-file-invoice-dollar text-cyan-500 text-3xl mb-2"></i>
+                        <p class="font-semibold text-sm">請求書や契約書の作成、印刷・発送作業に時間がかかっている</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <i class="fas fa-coins text-cyan-500 text-3xl mb-4"></i>
-                        <p class="font-semibold">郵送費や印刷代、紙・封筒などのコストが年々増加している</p>
+                    <div class="bg-white p-4 rounded-full shadow-md text-center fade-in-up flex flex-col items-center justify-center aspect-square" style="transition-delay: 0.2s;">
+                        <i class="fas fa-coins text-cyan-500 text-3xl mb-2"></i>
+                        <p class="font-semibold text-sm">郵送費や印刷代、紙・封筒などのコストが年々増加している</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <i class="fas fa-archive text-cyan-500 text-3xl mb-4"></i>
-                        <p class="font-semibold">書類の保管スペースがオフィスを圧迫している</p>
+                    <div class="bg-white p-4 rounded-full shadow-md text-center fade-in-up flex flex-col items-center justify-center aspect-square" style="transition-delay: 0.3s;">
+                        <i class="fas fa-archive text-cyan-500 text-3xl mb-2"></i>
+                        <p class="font-semibold text-sm">書類の保管スペースがオフィスを圧迫している</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                         <i class="fas fa-phone-slash text-cyan-500 text-3xl mb-4"></i>
-                        <p class="font-semibold">お客様と電話が繋がらず、連絡や確認に時間がかかっている</p>
+                    <div class="bg-white p-4 rounded-full shadow-md text-center fade-in-up flex flex-col items-center justify-center aspect-square" style="transition-delay: 0.4s;">
+                         <i class="fas fa-phone-slash text-cyan-500 text-3xl mb-2"></i>
+                        <p class="font-semibold text-sm">お客様と電話が繋がらず、連絡や確認に時間がかかっている</p>
                     </div>
                 </div>
-                <p class="text-center text-2xl font-bold text-cyan-600 mt-12">そのお悩み、PAYLYがすべて解決します！</p>
+                <p class="text-center text-3xl font-bold text-gray-800 mt-12 fade-in-up">そのお悩み、<span class="text-cyan-600">PAYLY</span>がすべて解決します！</p>
             </div>
         </section>
 
@@ -73,17 +83,17 @@
         <section class="py-20 px-6 brand-gradient">
             <div class="container mx-auto max-w-5xl">
                  <div class="grid md:grid-cols-3 gap-8 text-center items-center">
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-white p-8 rounded-lg shadow-lg fade-in-up">
                         <div class="text-cyan-500 text-5xl mb-4"><i class="fas fa-cogs"></i></div>
                         <h3 class="text-xl font-bold mb-2">ご利用のシステムは<br>そのまま</h3>
                         <p class="text-gray-600">現在ご利用中のシステムから請求書を送信可能。</p>
                     </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <div class="text-cyan-500 text-5xl mb-4"><i class="fas fa-piggy-bank"></i></div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="text-cyan-500 text-5xl mb-4"><i class="fas fa-hand-holding-usd"></i></div>
                         <h3 class="text-xl font-bold mb-2">コストと手間を<br>削減</h3>
                         <p class="text-gray-600">郵送費や印刷、封入作業がなくなります。</p>
                     </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-white p-8 rounded-lg shadow-lg fade-in-up" style="transition-delay: 0.4s;">
                         <div class="text-cyan-500 text-5xl mb-4"><i class="fas fa-heart"></i></div>
                         <h3 class="text-xl font-bold mb-2">顧客満足度を<br>向上</h3>
                         <p class="text-gray-600">お客様はアプリでいつでも簡単に確認できます。</p>
@@ -95,22 +105,22 @@
         <!-- 機能紹介セクション -->
         <section class="py-20 px-6">
             <div class="container mx-auto max-w-4xl">
-                <h2 class="text-center text-3xl font-bold text-gray-800 mb-12">主な機能</h2>
+                <h2 class="text-center text-3xl font-bold text-gray-800 mb-12 fade-in-up">主な機能</h2>
                 <div class="grid md:grid-cols-2 gap-10">
-                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <div class="bg-white p-6 rounded-lg shadow-md fade-in-up">
                         <h3 class="text-xl font-bold text-cyan-700 mb-3">電子請求書配信</h3>
                         <p class="text-gray-600">紙の請求書を電子化し、PAYLYに取り込むだけでお客様のスマートフォンに送信することができます。お客様はPAYLYアプリから簡単に確認でき、SMS送信にも対応しています。郵送や印刷、紙・封筒などのコストと発送にかかる手間を大幅に削減することが可能です。</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <div class="bg-white p-6 rounded-lg shadow-md fade-in-up" style="transition-delay: 0.2s;">
                         <h3 class="text-xl font-bold text-cyan-700 mb-3">キャッシュレス決済</h3>
                         <p class="text-gray-600">お客様のスマートフォンからクレジットカードやID決済によりお払いいただけるオンライン決済機能です。口座振替や集金の手間をなくし、入金確認の作業や未回収リスクを大幅に軽減します。<br><span class="text-xs">※PAYLYと貴社システムとの連携と、決済代行会社との契約が必要です。</span></p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <div class="bg-white p-6 rounded-lg shadow-md fade-in-up">
                         <h3 class="text-xl font-bold text-cyan-700 mb-1">文書電子化 & 保存</h3>
                         <span class="text-xs font-bold text-white bg-orange-500 px-2 py-1 rounded-md inline-block mb-2">2025年冬頃リリース予定</span>
                         <p class="text-gray-600">契約書や説明書など、あらゆる紙の書類を電子化してクラウドに保存。紙の保管スペースやファイリングが不要になるだけでなく、書類を探す時間の短縮や、紛失等の情報漏洩対策にも有効です。また、訪問先でも必要書類にすぐにアクセスすることが可能です。</p>
                     </div>
-                     <div class="bg-white p-6 rounded-lg border border-gray-200">
+                     <div class="bg-white p-6 rounded-lg shadow-md fade-in-up" style="transition-delay: 0.2s;">
                         <h3 class="text-xl font-bold text-cyan-700 mb-1">メッセージ送信</h3>
                         <span class="text-xs font-bold text-white bg-orange-500 px-2 py-1 rounded-md inline-block mb-2">2026年春頃リリース予定</span>
                         <p class="text-gray-600">お客様との連絡をアプリ上で一元管理できます。重要なお知らせやアポイントの連絡などを確実に行い、記録に残すことでトラブルを回避します。また、画像や動画を送ることで、より深い情報をお客様に届けることが可能です。電話のすれ違いや再コールの手間も削減します。</p>
@@ -122,23 +132,29 @@
          <!-- 導入・利用方法セクション -->
         <section class="py-20 px-6 brand-gradient">
             <div class="container mx-auto max-w-5xl text-center">
-                 <h2 class="text-3xl font-bold text-gray-800 mb-4">導入は驚くほどかんたん！</h2>
-                 <p class="text-gray-600 mb-12">大規模な開発なしで、すぐにペーパーレス化を開始できます。</p>
-                 <img src="images/image2.png" alt="システム連携図" class="mx-auto rounded-lg shadow-lg w-full h-auto mb-12">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-4 fade-in-up">導入は驚くほどかんたん！</h2>
+                 <p class="text-gray-600 mb-12 fade-in-up">大規模な開発なしで、すぐにペーパーレス化を開始できます。</p>
+                 <img src="images/image2.png" alt="システム連携図" class="mx-auto rounded-lg w-full h-auto max-w-4xl mb-12 fade-in-up">
                  
-                 <h2 class="text-3xl font-bold text-gray-800 mb-4">ご利用は迷わずシンプル！</h2>
-                 <p class="text-gray-600 mb-12">お客様に面倒な手続きは一切ございません。</p>
+                 <h2 class="text-3xl font-bold text-gray-800 mb-4 fade-in-up">ご利用は迷わずシンプル！</h2>
+                 <p class="text-gray-600 mb-12 fade-in-up">お客様に面倒な手続きは一切ございません。</p>
                  <div class="grid md:grid-cols-3 gap-8 items-start">
-                    <div>
-                        <img src="images/image3.png" alt="アプリインストール画面" class="mx-auto rounded-lg shadow-md w-full h-auto max-w-xs">
+                    <div class="fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="h-80 flex items-center justify-center">
+                            <img src="images/image3.png" alt="アプリインストール画面" class="max-h-full max-w-full w-auto">
+                        </div>
                         <p class="font-bold mt-4">1. 「PAYLYアプリ」を<br>インストール</p>
                     </div>
-                    <div>
-                        <img src="images/image4.png" alt="QRコード読み取り画面" class="mx-auto rounded-lg shadow-md w-full h-auto max-w-xs">
+                    <div class="fade-in-up" style="transition-delay: 0.3s;">
+                        <div class="h-80 flex items-center justify-center">
+                            <img src="images/image4.png" alt="QRコード読み取り画面" class="max-h-full max-w-full w-auto">
+                        </div>
                         <p class="font-bold mt-4">2. 専用QRコードから<br>ログイン</p>
                     </div>
-                     <div>
-                        <img src="images/image5.png" alt="請求書確認画面" class="mx-auto rounded-lg shadow-md w-full h-auto max-w-xs">
+                     <div class="fade-in-up" style="transition-delay: 0.5s;">
+                         <div class="h-80 flex items-center justify-center">
+                            <img src="images/image5.png" alt="請求書確認画面" class="max-h-full max-w-full w-auto">
+                        </div>
                         <p class="font-bold mt-4">3. 請求・領収書を<br>いつでも確認</p>
                     </div>
                  </div>
@@ -147,7 +163,7 @@
 
         <!-- FAQセクション -->
         <section class="py-20 px-6 brand-gradient">
-            <div class="container mx-auto max-w-4xl">
+            <div class="container mx-auto max-w-4xl fade-in-up">
                 <h2 class="text-3xl font-bold text-center mb-12">よくある質問</h2>
                 <div class="space-y-4">
                     <details class="bg-white p-6 rounded-lg shadow-sm cursor-pointer">
@@ -176,7 +192,7 @@
 
         <!-- CTAセクション -->
         <section class="py-20 px-6 text-center">
-             <div class="container mx-auto max-w-4xl">
+             <div class="container mx-auto max-w-4xl fade-in-up">
                  <h2 class="text-3xl font-bold text-gray-800 mb-4">導入のご相談、資料請求など<br>お気軽にご連絡ください</h2>
                  <p class="text-gray-600 mb-8">専門のスタッフが丁寧にご案内いたします。</p>
                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSduDaDXoi_y6yLtBgIJiaJT3QkQYKrTz0rKpO2WyuaEUHF1kA/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="bg-orange-500 text-white font-bold py-4 px-12 rounded-full hover:bg-orange-600 transition duration-300 text-lg inline-block shadow-lg">
@@ -205,6 +221,26 @@
         </div>
     </footer>
 
+    <script>
+        // スクロールで要素をフェードインさせる
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // 要素が10%見えたらトリガー
+            });
+
+            const elementsToAnimate = document.querySelectorAll('.fade-in-up');
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
 
